@@ -1,2 +1,6 @@
 from tortoise import Model
-from pydantic import Base
+from pydantic import BaseModel
+
+
+class User(Model):
+    
