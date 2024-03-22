@@ -12,5 +12,6 @@ class User(Model):
     
 
 class Business(Model):
-    
+     id= fields.InterField(pk= True, index=True)
+     
 
