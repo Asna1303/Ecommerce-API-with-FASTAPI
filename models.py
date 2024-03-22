@@ -1,6 +1,6 @@
 from tortoise import Model, fields
 from pydantic import BaseModel
-from datetime import _Datetime
+from datetime import datetime
 
 class User(Model):
     id= fields.InteField(pk= True, index=True)
@@ -8,7 +8,8 @@ class User(Model):
     email=fields.CharField(max_length=200, null=False, Unique = True)
     password=fields.CharField(max_length=100, null=False)
     is_verified=fields.BooleanField(default=False)
-    join_data=fields.DatetimeField(default=)
+    join_data=fields.DatetimeField(default=datetime.utcnow)
+    
 
 
 
