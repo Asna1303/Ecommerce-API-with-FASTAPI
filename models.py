@@ -11,5 +11,6 @@ class User(Model):
     join_data=fields.DatetimeField(default=datetime.utcnow)
     
 
-
+class Business(Model):
+    
 
