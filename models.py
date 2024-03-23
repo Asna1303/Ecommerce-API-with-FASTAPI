@@ -25,6 +25,8 @@ class Product(Model):
       name= fields.CharField(max_length=100, null=False, index = True)
       category=fields.CharField(max_length=40, index = True)
       original_price=fields.DecimalField(max_digits=2,decimal_places=2)
+      new_price=fields.DecimalField(max_digits=12,decimal_places=2)
+      percentage_discount=fields.IntField()
 
     
 
