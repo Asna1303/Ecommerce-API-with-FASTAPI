@@ -35,6 +35,8 @@ class Product(Model):
 
 
     
-user_pydantic=pydantic
+user_pydantic=pydantic_model_creator(User, name="User", exclude=("is_verified", ))
+user_pydanticIn=pydanticIn=pydantic_model_creator(User, name="UserIn", exclude_readonly=True)
+
 
 
