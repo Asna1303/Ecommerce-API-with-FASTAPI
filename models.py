@@ -19,6 +19,8 @@ class Business(Model):
      business_description=fields.TextField(null=True)
      logo=fields.CharField(max_length=200, null=False, default="default.jpg")
      owner=fields.ForeignKeyField("models.User",related_name="business")
+
+class Product(Model):
      
 
 
