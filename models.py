@@ -28,6 +28,7 @@ class Product(Model):
       new_price=fields.DecimalField(max_digits=12,decimal_places=2)
       percentage_discount=fields.IntField()
       offer_expiration_data=fields.DateField(default=datetime.utcnow)
+      product_image=fields.CharField(max_length=200, null=False, default="productDefault.jpg")
       
 
     
