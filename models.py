@@ -17,7 +17,7 @@ class Business(Model):
      city=fields.CharField(max_length=100, null=False, default="Unspecified")
      region=fields.CharField(max_length=100, null=False, default="Unspecified")
      business_description=fields.TextField(null=True)
-     
+     logo=fields.CharField(max_length=200, null=False, default="default.jpg")
 
 
 
