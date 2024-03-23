@@ -21,7 +21,7 @@ class Business(Model):
      owner=fields.ForeignKeyField("models.User",related_name="business")
 
 class Product(Model):
-     
+      id= fields.IntField(pk= True, index=True)
 
 
 
