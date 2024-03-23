@@ -15,7 +15,7 @@ class Business(Model):
      id= fields.InterField(pk= True, index=True)
      business_name = fields.CharField(max_length=20, null=False, Unique = True)
      city=fields.CharField(max_length=100, null=False, default="Unspecified")
-     
+     region=fields.CharField(max_length=100, null=False, default="Unspecified")
 
 
 
