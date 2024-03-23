@@ -23,7 +23,9 @@ class Business(Model):
 class Product(Model):
       id= fields.IntField(pk= True, index=True)
       name= fields.CharField(max_length=100, null=False, index = True)
-      
+      category=fields.CharField(max_length=40, index = True)
+      original_price=fields.DecimalField(max_digits=2,decimal_places=2)
+
     
 
 
