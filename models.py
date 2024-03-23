@@ -1,6 +1,8 @@
+import pydantic
 from tortoise import Model, fields
 from pydantic import BaseModel
 from datetime import datetime
+from tortoise.contrib.pydantic import pydantic_model_creator
 
 class User(Model):
     id= fields.InteField(pk= True, index=True)
@@ -33,6 +35,6 @@ class Product(Model):
 
 
     
-
+user_pydantic=pydantic
 
 
