@@ -27,6 +27,8 @@ class Product(Model):
       original_price=fields.DecimalField(max_digits=2,decimal_places=2)
       new_price=fields.DecimalField(max_digits=12,decimal_places=2)
       percentage_discount=fields.IntField()
+      offer_expiration_data=fields.DateField(default=datetime.utcnow)
+      
 
     
 
