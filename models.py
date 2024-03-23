@@ -22,7 +22,9 @@ class Business(Model):
 
 class Product(Model):
       id= fields.IntField(pk= True, index=True)
-
+      name= fields.CharField(max_length=100, null=False, index = True)
+      
+    
 
 
 
