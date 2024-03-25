@@ -40,4 +40,4 @@ user_pydanticIn=pydantic_model_creator(User, name="UserIn", exclude_readonly=Tru
 user_pydanticOut=pydantic_model_creator(User, name="UserIn", exclude=("password", ))
 
 business_pydantic=pydantic_model_creator(Business, name="Business")
-
+business_pydanticIn=pydantic_model_creator(Business, name="BusinessIn", exclude_readonly=True)
