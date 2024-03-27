@@ -9,4 +9,6 @@ register_tortoise(
     app,
     db_url="sqlite://database.sqlite3",
     models={"models": ["models"]}
+    generate_schemas=True,
+    
 )
