@@ -4,6 +4,10 @@ from models import *
 
 app= FastAPI()
 
+@app.get("/")
+def index():
+    return {"Me"}
+
 
 register_tortoise(
     app,
