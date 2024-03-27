@@ -5,7 +5,7 @@ from datetime import datetime
 from tortoise.contrib.pydantic import pydantic_model_creator
 
 class User(Model):
-    id= fields.InteField(pk= True, index=True)
+    id= fields.IntField(pk= True, index=True)
     username = fields.CharField(max_length=20, null=False, Unique = True)
     email=fields.CharField(max_length=200, null=False, Unique = True)
     password=fields.CharField(max_length=100, null=False)
@@ -14,7 +14,7 @@ class User(Model):
     
 
 class Business(Model):
-     id= fields.InterField(pk= True, index=True)
+     id= fields.IntField(pk= True, index=True)
      business_name = fields.CharField(max_length=20, null=False, Unique = True)
      city=fields.CharField(max_length=100, null=False, default="Unspecified")
      region=fields.CharField(max_length=100, null=False, default="Unspecified")
