@@ -6,7 +6,7 @@ app= FastAPI()
 
 @app.get("/")
 def index():
-    return {"Me"}
+    return {"Message":"hello world"}
 
 
 register_tortoise(
