@@ -4,6 +4,8 @@ from models import *
 
 app= FastAPI()
 
+@app.post("/")
+
 @app.get("/")
 def index():
     return {"Message":"hello world"}
