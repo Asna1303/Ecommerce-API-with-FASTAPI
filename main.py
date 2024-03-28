@@ -5,6 +5,7 @@ from models import *
 app= FastAPI()
 
 @app.post("/registration")
+async def user_registrations(user: )
 
 @app.get("/")
 def index():
