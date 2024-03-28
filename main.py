@@ -4,7 +4,7 @@ from models import *
 
 app= FastAPI()
 
-@app.post("/")
+@app.post("/registration")
 
 @app.get("/")
 def index():
