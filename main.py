@@ -9,7 +9,8 @@ app= FastAPI()
 @app.post("/registration")
 async def user_registrations(user: user_pydanticIn):
     user_info = user.dict(exclude_unset=True)
-    user_info["password"]=
+    user_info["password"]=get_hashed_password(user_info["password"])
+    
 
 @app.get("/")
 def index():
