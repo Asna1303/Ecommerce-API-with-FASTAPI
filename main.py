@@ -12,6 +12,10 @@ async def user_registrations(user: user_pydanticIn):
     user_info["password"]=get_hashed_password(user_info["password"])
     user_obj=await User.create(**user_info)
     new_user=await user_pydantic.from_tortoise_orm(user_obj)
+    return{
+        "status":"ok",
+        "data" :f"Hello {new_user.username}, tthanks for choosing our services.pls check ur mail and click on the link to confirm ur registration."
+    }
 
 @app.get("/")
 def index():
