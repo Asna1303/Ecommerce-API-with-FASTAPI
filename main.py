@@ -5,6 +5,8 @@ from models import *
 from authentication import (get_hashed_password)
 #signals
 from tortoise.signals import post_save
+from typing import List,Optional,Type
+
 
 
 app= FastAPI()
