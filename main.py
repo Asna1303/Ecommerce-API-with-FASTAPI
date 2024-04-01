@@ -21,6 +21,10 @@ async def create_business(
     update_fields : List[str]
 ) -> None :
     if created:
+        business_obj=await Business.create(
+            business_name=instance.username, owner=instance
+        )
+        await business_pydantic .from_tortoise_orm(business_obj)
 
 
 @app.post("/registration")
