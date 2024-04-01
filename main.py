@@ -13,6 +13,15 @@ from tortoise import BaseDBAsyncClient
 app= FastAPI()
 
 @post_save(User)
+async def create_business(
+    sender : "Type[User]",
+    instance : User,
+    created:bool,
+    using_db :"Optional[BaseDBAsyncClient]",
+    update_fields : List[str]
+) -> None :
+    if created:
+
 
 @app.post("/registration")
 async def user_registrations(user: user_pydanticIn):
