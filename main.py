@@ -12,6 +12,8 @@ from tortoise import BaseDBAsyncClient
 
 app= FastAPI()
 
+@post_save(User)
+
 @app.post("/registration")
 async def user_registrations(user: user_pydanticIn):
     user_info = user.dict(exclude_unset=True)
