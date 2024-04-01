@@ -3,6 +3,9 @@ from tortoise import models
 from tortoise.contrib.fastapi import register_tortoise
 from models import *
 from authentication import (get_hashed_password)
+#signals
+from tortoise.signals import post_save
+
 
 app= FastAPI()
 
